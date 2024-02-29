@@ -38,7 +38,7 @@ public class FacturaController {
 	@Autowired
 	private PersonaService personaService;
 	
-//	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping()
 	public ResponseEntity<FacturaDTO> guardar(@RequestBody @Valid FacturaDTO facturaDTO){
 		log.info("Guardar Factura: "+facturaDTO);
